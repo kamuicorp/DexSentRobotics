@@ -1,1 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./styles/theme.scss";
+@import "./styles/typography.scss";
+@import "./styles/class.scss";
+@import "./styles/form.scss";
+@import "./styles/icon.scss";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+body {
+  width: 100dvw;
+  height: 100dvh;
+  overflow-x: hidden;
+  background-color: var(--blend-bg-2);
+  color: var(--contrast-bg-1);
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 1rem;
+  background-color: var(--blend-bg-2);
+}
+
+*::-webkit-scrollbar {
+  width: 0.3rem;
+  background-color: var(--contrast-bg-1);
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: transparent;
+}
+
+* {
+  transition: all 200ms ease;
+}

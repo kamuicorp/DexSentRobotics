@@ -1,0 +1,15 @@
+button {
+    outline: none;
+    border: none;
+    font-family: inherit;
+    font-size: 1.4rem;
+    font-weight: 500;
+    border-radius: 5rem;
+    padding: 1rem 2rem;
+}
+
+.outline_button {
+    border: 0.1rem solid var(--contrast-bg-1);
+    color: var(--contrast-bg-1);
+    background-color: transparent;
+}
