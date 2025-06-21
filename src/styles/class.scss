@@ -1,7 +1,9 @@
 section {
   width: 100dvw;
-  height: 100dvh;
+  min-height: 100dvh;
+  height: auto;
   overflow: hidden;
+  overflow-y: visible;
   position: relative;
 }
 

@@ -28,6 +28,7 @@ body {
   overflow-x: hidden;
   background-color: var(--blend-bg-2);
   color: var(--contrast-bg-1);
+  font-optical-sizing: auto;
 }
 
 *::-webkit-scrollbar-track {
