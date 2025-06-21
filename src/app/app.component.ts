@@ -4,6 +4,7 @@ import { MenuComponent } from './menu/menu.component';
 import { WhyComponent } from './why/why.component';
 import { WhatComponent } from './what/what.component';
 import { AboutComponent } from './about/about.component';
+import { CoreComponent } from './core/core.component';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ import { AboutComponent } from './about/about.component';
     WhyComponent,
     WhatComponent,
     AboutComponent,
+    CoreComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
