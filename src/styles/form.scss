@@ -1,15 +1,46 @@
 button {
-    outline: none;
-    border: none;
-    font-family: inherit;
-    font-size: 1.4rem;
-    font-weight: 500;
-    border-radius: 5rem;
-    padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border-radius: 5rem;
+  padding: 1rem 2rem;
 }
 
 .outline_button {
-    border: 0.1rem solid var(--contrast-bg-1);
-    color: var(--contrast-bg-1);
-    background-color: transparent;
+  border: 0.1rem solid var(--contrast-bg-1);
+  color: var(--contrast-bg-1);
+  background-color: transparent;
+}
+
+.shine_button {
+  background-image: var(--gradient-bg-1);
+  color: var(--blend-bg-1);
+}
+
+input {
+  background-color: none;
+  border: none;
+  outline: none;
+  border-radius: 5rem;
+  height: 3rem;
+  padding: 0 1rem;
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: inherit;
+
+  &::placeholder {
+    color: inherit;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 400;
+    opacity: 0.75;
+  }
+}
+
+.primary_input {
+  background-color: var(--blend-bg-3);
+  color: var(--contrast-bg-1);
 }

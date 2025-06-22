@@ -5,6 +5,7 @@ import { WhyComponent } from './why/why.component';
 import { WhatComponent } from './what/what.component';
 import { AboutComponent } from './about/about.component';
 import { CoreComponent } from './core/core.component';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ import { CoreComponent } from './core/core.component';
     WhyComponent,
     WhatComponent,
     AboutComponent,
-    CoreComponent
+    CoreComponent,
+    FooterComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
