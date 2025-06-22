@@ -6,6 +6,7 @@ import { WhatComponent } from './what/what.component';
 import { AboutComponent } from './about/about.component';
 import { CoreComponent } from './core/core.component';
 import { FooterComponent } from './footer/footer.component';
+import { ContactComponent } from './contact/contact.component';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,8 @@ import { FooterComponent } from './footer/footer.component';
     WhatComponent,
     AboutComponent,
     CoreComponent,
-    FooterComponent
+    FooterComponent,
+    ContactComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

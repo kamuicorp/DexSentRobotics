@@ -44,3 +44,8 @@ input {
   background-color: var(--blend-bg-3);
   color: var(--contrast-bg-1);
 }
+
+.outline_input {
+  border: 0.1rem solid var(--contrast-bg-1);
+  background-color: transparent;
+}
