@@ -1,0 +1,70 @@
+<section class="contact_section">
+  <div class="cs_grid">
+    <div class="csgc left fcfsc">
+      <div class="s_title frcfs">
+        <div class="dash"></div>
+        <h5>Contact us</h5>
+      </div>
+      <h2 class="ff_orb">Transform your vision into reality</h2>
+      <p class="ff_ms">
+        We turn bold ideas into groundbreaking solutions. Harnessing the power
+        of AI, we transform visionary concepts into tangible realities,
+        empowering businesses.
+      </p>
+      <div class="contact_extras_grid">
+        <div class="cegc frcfs" *ngFor="let item of contactExtras">
+          <i class="fi fi-rr-check"></i>
+          <p class="ff_ms">{{ item }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="csgc right frcc">
+      <form class="fcfsfs ff_ms">
+        <h4>Contact details</h4>
+        <div class="bi_group">
+          <div class="input_group fcfsfs">
+            <label for="firstName">First name:</label>
+            <input
+              type="text"
+              placeholder="John"
+              name="firstName"
+              id="firstName"
+              class="outline_input"
+            />
+          </div>
+          <div class="input_group fcfsfs">
+            <label for="lastName">Last name:</label>
+            <input
+              type="text"
+              placeholder="Wick"
+              name="lastName"
+              id="lastName"
+              class="outline_input"
+            />
+          </div>
+        </div>
+        <div class="input_group fcfsfs">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            placeholder="abc@gmail.com"
+            name="email"
+            id="email"
+            class="outline_input"
+          />
+        </div>
+        <div class="input_group fcfsfs">
+          <label for="address">Address:</label>
+          <input
+            type="text"
+            placeholder="Enter your address with zipcode"
+            name="address"
+            id="email"
+            class="outline_input"
+          />
+        </div>
+        <button type="submit" class="outline_button">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
