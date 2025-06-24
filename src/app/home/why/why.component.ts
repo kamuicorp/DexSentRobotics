@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { UiService } from '../../services/ui.service';
 
 @Component({
   selector: 'app-why',
@@ -31,4 +32,6 @@ export class WhyComponent {
       short: 'Proudly developed in India for global relevance.',
     },
   ];
+
+  constructor(public uiService: UiService){}
 }

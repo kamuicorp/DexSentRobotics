@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UiService } from '../../services/ui.service';
 
 @Component({
   selector: 'app-what',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './what.component.scss'
 })
 export class WhatComponent {
-
+  constructor(public uiService: UiService){}
 }

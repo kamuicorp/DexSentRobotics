@@ -69,6 +69,18 @@
           }
         }
 
+        &.paused {
+          &::before {
+            animation-play-state: paused !important;
+          }
+        }
+
+        &.played {
+          &::before {
+            animation-play-state: running !important;
+          }
+        }
+
         &::before {
           content: "";
           position: absolute;

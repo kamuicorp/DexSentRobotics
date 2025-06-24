@@ -10,7 +10,11 @@
     <div class="focus_flex ff_ms frfsfs">
       <i class="fi fi-rr-robotic-arm"></i>
       <div class="ff_content_flex fcfsfs">
-        <div class="ffcf_title frcsb">
+        <div
+          class="ffcf_title frcsb"
+          role="button"
+          (click)="uiService.routeToPage('/products')"
+        >
           <h5>Industrial Solutions (B2B)</h5>
           <i class="fi fi-rr-arrow-up-right"></i>
         </div>
@@ -31,7 +35,11 @@
     <div class="focus_flex ff_ms frfsfs">
       <i class="fi fi-rr-user-robot"></i>
       <div class="ff_content_flex fcfsfs">
-        <div class="ffcf_title frcsb">
+        <div
+          class="ffcf_title frcsb"
+          role="button"
+          (click)="uiService.routeToPage('/products')"
+        >
           <h5>Humaniod Platforms (B2C)</h5>
           <i class="fi fi-rr-arrow-up-right"></i>
         </div>
@@ -45,10 +53,14 @@
         </ul>
       </div>
     </div>
-    <div class="watch_video frcfs">
+    <div class="watch_video frcfs" role="button" (click)="uiService.routeToPage('/blogs')">
       <i class="fi fi-ss-play-circle"></i>
       <p>Watch a Video</p>
     </div>
   </div>
-  <img class="abc" src="/images/G2.png" alt="Humanoid Gripper What Page Image">
+  <img
+    class="abc"
+    src="/images/G2.png"
+    alt="Humanoid Gripper What Page Image"
+  />
 </section>

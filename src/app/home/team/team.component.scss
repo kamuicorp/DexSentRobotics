@@ -57,6 +57,12 @@
         overflow: hidden;
         position: relative;
 
+        img {
+          width: 100%;
+          height: auto;
+          filter: grayscale(1);
+        }
+
         .details_flex {
             z-index: 3;
             background-color: var(--contrast-bg-1);

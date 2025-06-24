@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "host": "ng serve --host 0.0.0.0 --ssl true",
+    "host": "ng serve --host 0.0.0.0 --ssl false",
     "test": "ng test"
   },
   "private": true,
@@ -19,6 +19,7 @@
     "@angular/platform-browser": "^18.1.0",
     "@angular/platform-browser-dynamic": "^18.1.0",
     "@angular/router": "^18.1.0",
+    "gapi-script": "^1.2.0",
     "gsap": "^3.13.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

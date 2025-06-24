@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component } from '@angular/core';
+import { loadGapiInsideDOM, gapi } from 'gapi-script';
 import gsap from 'gsap';
 
 @Component({
@@ -47,6 +48,10 @@ export class AboutComponent implements AfterViewInit {
   ];
   currentIndex: number = 0;
   sliderInterval: any;
+  pausedInterval: any;
+  pausedTimeout: any;
+  remainingTime: number = 10000;
+  pausedTime: number = 0;
 
   ngAfterViewInit(): void {
     this.sliderInterval = setInterval(() => {
@@ -54,7 +59,7 @@ export class AboutComponent implements AfterViewInit {
         this.currentIndex++;
       else this.currentIndex = 0;
       this.animateSlider();
-    }, 10000);
+    }, this.remainingTime);
   }
 
   animateSlider() {
@@ -90,7 +95,38 @@ export class AboutComponent implements AfterViewInit {
           this.currentIndex++;
         else this.currentIndex = 0;
         this.animateSlider();
-      }, 10000);
+      }, this.remainingTime);
+    } catch (error) {
+      console.error(error);
+      throw error;
+    }
+  };
+
+  onMouseEnter = () => {
+    try {
+      clearInterval(this.sliderInterval);
+      this.pausedInterval = setInterval(() => {
+        this.pausedTime += 1000;
+      }, 1000);
+    } catch (error) {
+      console.error(error);
+      throw error;
+    }
+  };
+
+  onMouseLeave = () => {
+    try {
+      clearTimeout(this.pausedTimeout);
+      this.pausedTimeout = setTimeout(
+        () => {
+          clearInterval(this.pausedInterval);
+          this.pausedInterval = null;
+          this.onNavigate('front');
+        },
+        this.remainingTime - this.pausedTime <= 0
+          ? 0
+          : this.remainingTime - this.pausedTime,
+      );
     } catch (error) {
       console.error(error);
       throw error;

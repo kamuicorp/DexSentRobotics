@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { ComingSoonComponent } from '../shared/coming-soon/coming-soon.component';
 
 @Component({
   selector: 'app-blog',
   standalone: true,
-  imports: [],
+  imports: [ComingSoonComponent],
   templateUrl: './blog.component.html',
-  styleUrl: './blog.component.scss'
+  styleUrl: './blog.component.scss',
 })
-export class BlogComponent {
-
-}
+export class BlogComponent {}
