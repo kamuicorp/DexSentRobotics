@@ -50,3 +50,17 @@
     }
   }
 }
+
+@media screen and (orientation: portrait) {
+  .why_section {
+    padding: 2rem 7.5rem;
+
+    .purpose_grid {
+      grid-template-columns: 1fr;
+    }
+
+    h2 {
+      text-align: center;
+    }
+  }
+}

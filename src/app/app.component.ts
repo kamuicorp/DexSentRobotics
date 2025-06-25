@@ -9,13 +9,15 @@ import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './home/contact/contact.component';
 import { TeamComponent } from './home/team/team.component';
 import { RouterOutlet } from '@angular/router';
+import { AutoFontSizeDirective } from './directives/auto-font-size.directive';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     RouterOutlet,
-    MenuComponent
+    MenuComponent,
+    AutoFontSizeDirective
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

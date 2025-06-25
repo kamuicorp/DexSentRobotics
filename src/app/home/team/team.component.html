@@ -8,7 +8,7 @@
     <h4>Leadership</h4>
     <div class="image_grid">
       <div class="igc" *ngFor="let leader of leaders">
-        <img class="abc" src="/images/image.png" alt="Member Image">
+        <img class="abc" [src]="leader.img" alt="Member Image">
         <div class="details_flex ff_pr abbl">
           <h3>{{ leader.name }}</h3>
           <h6>{{ leader.details }}</h6>
@@ -20,7 +20,7 @@
     <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Team</h4>
     <div class="image_grid">
       <div class="igc" *ngFor="let team of teams">
-        <img class="abc" src="/images/image.png" alt="Member Image">
+        <img class="abc" [src]="team.img"  alt="Member Image">
         <div class="details_flex ff_pr abbl">
           <h3>{{ team.name }}</h3>
           <h6>{{ team.details }}</h6>

@@ -86,3 +86,24 @@
     }
   }
 }
+
+@media screen and (orientation: portrait) {
+  .team_section {
+    padding: 2rem 7.5rem;
+    align-items: center;
+
+    h2 {
+      text-align: center;
+    }
+
+    .team_flex {
+      h4 {
+        display: none;
+      }
+
+      .image_grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

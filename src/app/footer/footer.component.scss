@@ -4,6 +4,7 @@ footer {
   width: 100dvw;
   height: auto;
   gap: 5rem;
+  overflow: hidden;
 
   a,
   p {
@@ -90,6 +91,41 @@ footer {
         i {
           font-size: 1.4rem;
           opacity: 0.75;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (orientation: portrait) {
+  footer {
+    padding: 2rem 7.5rem;
+    gap: 2rem;
+    padding-bottom: 7.5rem;
+
+    .address_flex {
+      flex-direction: column;
+      gap: 2rem;
+
+      .left {
+        gap: 2rem;
+
+        flex-direction: column;
+      }
+    }
+
+    .links_flex {
+      flex-wrap: wrap;
+
+      .lfc:last-child {
+        width: 100%;
+
+        .link_flex {
+          width: 100%;
+
+          .input_group {
+            width: 100%;
+          }
         }
       }
     }

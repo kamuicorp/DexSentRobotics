@@ -118,3 +118,28 @@
     }
   }
 }
+
+@media screen and (orientation: portrait) {
+  .what_section {
+    grid-template-columns: 1fr;
+
+    .wsgc.right {
+      padding: 2rem 7.5rem;
+      padding-right: 7.5rem;
+      align-items: center;
+      justify-content: flex-start;
+
+      h2,
+      h4 {
+        text-align: center;
+      }
+    }
+
+    img {
+      position: relative;
+      width: 100%;
+      height: auto;
+      max-width: unset;
+    }
+  }
+}

@@ -114,3 +114,22 @@
     }
   }
 }
+
+@media screen and (orientation: portrait) {
+  .core_section {
+    padding: 2rem 7.5rem;
+    align-items: center;
+
+    .core_grid {
+      grid-template-columns: 1fr;
+
+      .cgc:last-child {
+        height: 5rem;
+
+        .explore_link {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

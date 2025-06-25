@@ -11,51 +11,26 @@ import { Component } from '@angular/core';
 export class TeamComponent {
   leaders: { img: string; name: string; details: string }[] = [
     {
-      img: '',
-      name: 'Barat Suresh',
-      details: 'Designation, Location',
+      img: '/images/founder/barat.jpeg',
+      name: 'Barat S',
+      details: 'Director, Gandhinagar',
     },
     {
-      img: '',
+      img: '/images/founder/praveen.jpeg',
       name: 'Praveen Suresh',
-      details: 'Designation, Location',
+      details: 'Director, Bengaluru',
     },
     {
-      img: '',
-      name: 'Harish p',
-      details: 'Designation, Location',
+      img: '/images/founder/harish.jpeg',
+      name: 'Harish PM',
+      details: 'Director, Gandhinagar',
     },
   ];
   teams: { img: string; name: string; details: string }[] = [
     {
-      img: '',
-      name: 'Barat Suresh',
-      details: 'Designation, Location',
-    },
-    {
-      img: '',
-      name: 'Praveen Suresh',
-      details: 'Designation, Location',
-    },
-    {
-      img: '',
-      name: 'Harish p',
-      details: 'Designation, Location',
-    },
-    {
-      img: '',
-      name: 'Barat Suresh',
-      details: 'Designation, Location',
-    },
-    {
-      img: '',
-      name: 'Praveen Suresh',
-      details: 'Designation, Location',
-    },
-    {
-      img: '',
-      name: 'Harish p',
-      details: 'Designation, Location',
-    },
+      img: '/images/team/kaivalya-shah.png',
+      name: 'Kaivalya Shah',
+      details: 'Lead Engineer, Gandhinagar',
+    }
   ];
 }

@@ -104,3 +104,13 @@
     width: 100%;
   }
 }
+
+@media screen and (orientation: portrait) {
+  .about_section {
+    padding: 2rem 0;
+
+    .slider_container .slider_flex {
+      align-items: flex-start;
+    }
+  }
+}
