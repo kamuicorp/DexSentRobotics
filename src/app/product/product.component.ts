@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { ComingSoonComponent } from '../shared/coming-soon/coming-soon.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [ComingSoonComponent],
+  imports: [RouterOutlet],
   templateUrl: './product.component.html',
   styleUrl: './product.component.scss'
 })

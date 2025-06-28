@@ -1,0 +1,85 @@
+<section class="productdetail_section fcfsfs" *ngIf="productDetail">
+  <h5>{{ productDetail.category }}</h5>
+  <h2 class="ff_orb">{{ productDetail.name }}</h2>
+  <div class="intro_grid">
+    <div class="igc fccc">
+      <div class="ig_slider_container fcfsfs">
+        <div class="igsc_flex frfsfs">
+          <div class="igscfc frcc" *ngFor="let item of productDetail.images">
+            <div class="igscfs_content">
+              <img [src]="item" class="abc" alt="Product Image" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ig_slider_paginator frcc">
+        <div
+          class="dot"
+          *ngFor="let item of productDetail.images; let i = index"
+          [ngClass]="{ active: i === activeImageIndex }"
+        ></div>
+      </div>
+    </div>
+    <div class="igc right fcfssb">
+      <p class="ff_ms" [innerHTML]="productDetail.long"></p>
+      <button type="button" class="outline_button">Get Quote</button>
+    </div>
+  </div>
+  <div class="key_features_grid">
+    <div class="kfc fcfsfs left ff_ms">
+      <h4>Key Features</h4>
+      <p>{{ productDetail.keyFeatures.intro }}</p>
+    </div>
+    <div class="kfc fcfsfs right ff_pp">
+      <div
+        class="feature_flex fcfsfs"
+        *ngFor="let item of productDetail.keyFeatures.features"
+      >
+        <h6>{{ item.title }}</h6>
+        <ng-container *ngIf="item.points.length === 1">
+          <p>{{ item.points[0] }}</p>
+        </ng-container>
+        <ng-container *ngIf="item.points.length > 1">
+          <ul class="fcfsfs">
+            <li *ngFor="let item of item.points">{{ item }}</li>
+          </ul>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  <div class="specs_container fcfsfs">
+    <div class="intro_flex fcfsfs ff_ms">
+      <h4>Specifications</h4>
+      <p>{{ productDetail.specifications.intro }}</p>
+    </div>
+    <div class="spec_grid">
+      <ng-container *ngFor="let item of productDetail.specifications.specs">
+        <div class="sgc">
+          <h6>{{ item.parameter }}</h6>
+        </div>
+        <div class="sgc ff_ms">
+          <p [innerHTML]="item.value"></p>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="video_container fcfsfs">
+    <div class="intro_flex fcfsfs ff_ms">
+      <h4>Product Videos</h4>
+      <p>{{ productDetail.videos.intro }}</p>
+    </div>
+    <div class="content_flex frfsfs">
+      <div
+        class="cf_content fcfsfs"
+        *ngFor="let item of productDetail.videos.content"
+      >
+        <div class="video_container">
+          <iframe class="abtl" [src]="item.url | safe" frameborder="0"></iframe>
+        </div>
+        <span class="ff_int">Published on {{item.publishedOn}} {{item.publishedDate | date:'MMM d, y'}}</span>
+        <h2 class="ff_ms">{{item.title}}</h2>
+        <p class="ff_ms">{{item.description}}</p>
+      </div>
+    </div>
+  </div>
+</section>

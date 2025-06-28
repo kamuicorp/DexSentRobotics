@@ -1,14 +1,20 @@
 <menu class="frcc ff_ms">
-    <div class="menu_item active frcc">
-        <a href="#">Home</a>
-    </div>
-    <div class="menu_item frcc">
-        <a href="#">About</a>
-    </div>
-    <div class="menu_item frcc">
-        <a href="#">Services</a>
-    </div>
-    <div class="menu_item frcc">
-        <a href="#">Products</a>
-    </div>
+  <div
+    class="menu_item frcc"
+    [ngClass]="{ active: activeSection === 'lander' }"
+  >
+    <a (click)="onClick('lander')">Home</a>
+  </div>
+  <div class="menu_item frcc" [ngClass]="{ active: activeSection === 'about' }">
+    <a (click)="onClick('about')">About</a>
+  </div>
+  <div class="menu_item frcc" [ngClass]="{ active: activeSection === 'core' }">
+    <a (click)="onClick('core')">Services</a>
+  </div>
+  <div
+    class="menu_item frcc"
+    [ngClass]="{ active: activeSection.includes('product') }"
+  >
+    <a (click)="onClick('product')">Products</a>
+  </div>
 </menu>
