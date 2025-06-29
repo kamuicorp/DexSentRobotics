@@ -1,3 +1,42 @@
-<main class="frcc">
-    <app-coming-soon></app-coming-soon>
-</main>
+<section class="blog_section fcfsfs">
+  <h5>PRODUCT installation & user guide</h5>
+  <h2 class="ff_orb">Doing it the dexsent way</h2>
+  <p class="ff_ms">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. <br />
+    <br />
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+    eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident,
+    sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+  <div class="categories_flex frcfs ff_int">
+    <a
+      [ngClass]="{ active: !selectedCategory }"
+      (click)="onSelectCategory('')"
+      >View all</a
+    >
+    <a
+      [ngClass]="{ active: selectedCategory === item }"
+      (click)="onSelectCategory(item)"
+      *ngFor="let item of categories"
+      >{{ item }}</a
+    >
+  </div>
+  <div class="video_container fcfsfs">
+    <div class="content_flex frfsfs">
+      <div class="cf_content fcfsfs" *ngFor="let item of filteredBlogs.videos.content">
+        <div class="video_container">
+          <iframe class="abtl" [src]="item.url | safe" frameborder="0"></iframe>
+        </div>
+        <span class="ff_int"
+          >Published on {{ item.publishedOn }}
+          {{ item.publishedDate | date: "MMM d, y" }}</span
+        >
+        <h2 class="ff_ms">{{ item.title }}</h2>
+        <p class="ff_ms">{{ item.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>

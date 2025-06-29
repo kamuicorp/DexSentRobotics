@@ -25,3 +25,17 @@ export interface Product {
     }[];
   };
 }
+
+export interface Blog {
+  videos: {
+    content: {
+      category: string;
+      title: string;
+      description: string;
+      publishedDate: Date;
+      publishedOn: string;
+      url: string;
+      type: 'youtube_embed';
+    }[];
+  };
+}

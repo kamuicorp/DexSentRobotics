@@ -11,6 +11,10 @@ export const routes: Routes = [
     component: HomeComponent,
   },
   {
+    path: 'blog',
+    component: BlogComponent,
+  },
+  {
     path: 'products',
     component: ProductComponent,
     children: [

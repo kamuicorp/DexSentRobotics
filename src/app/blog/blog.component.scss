@@ -1,4 +1,124 @@
-main {
-  width: 100dvw;
-  height: 100dvh;
+.blog_section {
+  padding: 7.5rem 15rem;
+  gap: 4rem;
+
+  h2 {
+    font-size: 5rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-top: -3rem;
+  }
+
+  & > h5 {
+    font-size: 1rem;
+    opacity: 0.75;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.3;
+  }
+
+  .categories_flex {
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    a {
+      color: inherit;
+      font-size: 1.2rem;
+      opacity: 0.5;
+      text-decoration: none;
+
+      &.active {
+        text-decoration: underline;
+        opacity: 1;
+      }
+    }
+  }
+
+  .video_container {
+    gap: 2rem;
+    width: 100%;
+
+    .content_flex {
+      gap: 2rem;
+      width: 100%;
+      overflow-x: scroll;
+
+      .cf_content {
+        gap: 2rem;
+        width: calc(100% / 3);
+        min-width: calc(100% / 2.9);
+        overflow: hidden;
+
+        .video_container {
+          width: 100%;
+          aspect-ratio: 1.69;
+          background-color: var(--blend-bg-1a);
+          border-radius: 1.5rem;
+          overflow: hidden;
+          position: relative;
+
+          iframe {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        span {
+          opacity: 0.5;
+          font-size: 1rem;
+          font-weight: 400;
+        }
+
+        h2 {
+          margin-top: 1rem;
+          font-size: 2.4rem;
+          font-weight: 600;
+          text-transform: capitalize;
+          max-width: 30rem;
+          text-align: start;
+        }
+      }
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .blog_section {
+    padding: 2rem 7.5rem;
+    align-items: center;
+
+    h2,
+    p {
+      text-align: center;
+    }
+
+    .video_container {
+      .content_flex {
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        gap: 5rem;
+
+        .cf_content {
+          width: 100%;
+
+          h2 {
+            width: 100%;
+            max-width: 100%;
+            text-align: start;
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
 }
