@@ -7,7 +7,7 @@
   <div class="team_flex frfsfs">
     <h4>Leadership</h4>
     <div class="image_grid">
-      <div class="igc" *ngFor="let leader of leaders">
+      <div class="igc" *ngFor="let leader of leaders" (click)="redirect(leader.link)">
         <img class="abc" [src]="leader.img" alt="Member Image">
         <div class="details_flex ff_pr abbl">
           <h3>{{ leader.name }}</h3>
@@ -19,7 +19,7 @@
   <div class="team_flex frfsfs">
     <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Team</h4>
     <div class="image_grid">
-      <div class="igc" *ngFor="let team of teams">
+      <div class="igc" *ngFor="let team of teams" (click)="redirect(team.link)">
         <img class="abc" [src]="team.img"  alt="Member Image">
         <div class="details_flex ff_pr abbl">
           <h3>{{ team.name }}</h3>

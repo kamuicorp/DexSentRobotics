@@ -1,7 +1,7 @@
 <footer class="fcfsfs">
   <div class="links_flex frfssb">
     <div class="lfc lfc1 fcfsfs">
-      <img src="/images/logo.png" alt="Dexsent Logo">
+      <img src="/images/logo.png" alt="Dexsent Logo" />
       <p>
         DexSent is at the forefront of artificial intelligence, pushing the
         boundaries of innovation to create
@@ -10,20 +10,22 @@
     <div class="lfc fcfsfs">
       <h5 class="ff_pp">Quick links</h5>
       <div class="link_flex ff_ds fcfsfs">
-        <a href="#">About us</a>
-        <a href="#">Services</a>
-        <a href="#">Solutions</a>
-        <a href="#">Blog</a>
-        <a href="#">Careers</a>
+        <a (click)="uiService.scrollToSection('.about_section')">About us</a>
+        <a (click)="uiService.scrollToSection('.core_section')">Services</a>
+        <a (click)="uiService.scrollToSection('.producthome_section')"
+          >Products</a
+        >
+        <a (click)="uiService.scrollToSection('.blog_section')">Blog</a>
+        <a (click)="this.showCsp = true">Careers</a>
       </div>
     </div>
     <div class="lfc fcfsfs">
       <h5 class="ff_pp">Explore</h5>
       <div class="link_flex ff_ds fcfsfs">
-        <a href="#">Case studies</a>
-        <a href="#">Partners</a>
-        <a href="#">Testimonials</a>
-        <a href="#">Events</a>
+        <a (click)="this.showCsp = true">Case studies</a>
+        <a (click)="this.showCsp = true">Partners</a>
+        <a (click)="this.showCsp = true">Testimonials</a>
+        <a (click)="this.showCsp = true">Events</a>
       </div>
     </div>
     <div class="lfc fcfsfs">
@@ -38,10 +40,20 @@
             name="email"
             id="email"
           />
-          <button type="button" class="shine_button">Submit</button>
+          <button
+            type="button"
+            class="shine_button"
+            (click)="this.showCsp = true"
+          >
+            Submit
+          </button>
         </div>
         <div class="socials_flex frcfs">
-          <button type="button" class="shine_button frcc">
+          <button
+            type="button"
+            (click)="redirect('https://www.google.com/')"
+            class="shine_button frcc"
+          >
             <i class="fi fi-brands-linkedin"></i>
           </button>
           <button type="button" class="shine_button frcc">
@@ -63,13 +75,15 @@
       <div class="af_item frcc">
         <i class="fi fi-ss-marker"></i>
         <p>
-           IIEC | IIT Gandhinagar, Palaj, Gandhinagar, <br />
-           Gujarat, India, 382355
+          IIEC | IIT Gandhinagar, Palaj, Gandhinagar, <br />
+          Gujarat, India, 382355
         </p>
       </div>
       <div class="af_item frcc">
         <i class="fi fi-ss-envelope-dot"></i>
-        <a href="mailto:dexsentrobotics@gmail.com">{{ "dexsentrobotics@gmail.com" }}</a>
+        <a href="mailto:dexsentrobotics@gmail.com">{{
+          "dexsentrobotics@gmail.com"
+        }}</a>
       </div>
       <div class="af_item frcc">
         <i class="fi fi-ss-phone-flip"></i>
@@ -79,3 +93,8 @@
     <a href="#">DexSent</a>
   </div>
 </footer>
+
+<app-coming-soon
+  *ngIf="showCsp"
+  (exitCS)="this.showCsp = !$event"
+></app-coming-soon>

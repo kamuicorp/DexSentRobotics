@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ProductDetailComponent } from "./product-detail/product-detail.component";
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [ProductDetailComponent, FooterComponent],
   templateUrl: './product.component.html',
   styleUrl: './product.component.scss'
 })

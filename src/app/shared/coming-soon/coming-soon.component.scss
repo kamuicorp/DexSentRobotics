@@ -1,4 +1,21 @@
-h1 {
-    font-size: 3vw;
-    font-weight: 100;
+.comingsoon_popup {
+  z-index: 99999;
+  position: fixed;
+  width: 100dvw;
+  height: 100dvh;
+  backdrop-filter: blur(0.5rem);
+
+  .csp_container {
+    width: 60vw;
+    height: 70vh;
+    background-color: var(--contrast-bg-1);
+    overflow: hidden;
+    border-radius: 1.5rem;
+    color: var(--blend-bg-1);
+
+    h1 {
+      font-size: 2.5vw;
+      font-weight: 100;
+    }
+  }
 }

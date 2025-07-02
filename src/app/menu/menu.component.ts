@@ -16,6 +16,7 @@ export class MenuComponent implements AfterViewInit {
     'lander',
     'about',
     'core',
+    'blog',
     'producthome',
     'productdetail',
   ];
@@ -56,15 +57,13 @@ export class MenuComponent implements AfterViewInit {
 
   onClick = (to: string) => {
     const isRoot: boolean = this.router.url === '/';
-    if (['lander', 'about', 'core'].includes(to) && isRoot) {
+    if (['lander', 'about', 'core', 'producthome', 'blog'].includes(to) && isRoot) {
       this.uiService.scrollToSection(`.${to}_section`);
-    } else if (['lander', 'about', 'core'].includes(to) && !isRoot) {
+    } else if (['lander', 'about', 'core', 'producthome', 'blog'].includes(to) && !isRoot) {
       this.router.navigate(['/']);
       setTimeout(() => {
         this.uiService.scrollToSection(`.${to}_section`);
       }, 300);
-    } else {
-      this.router.navigate(['/products']);
     }
   };
 }

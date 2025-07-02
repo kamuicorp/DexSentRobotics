@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { UiService } from '../../services/ui.service';
 
 @Component({
   selector: 'app-core',
@@ -41,4 +42,6 @@ export class CoreComponent {
         'Our strength lies in collaboration. We believe  in ownership, curiosity, and bold  thinking—fostering a team culture where  ideas thrive and boundaries are pushed.',
     },
   ];
+
+  constructor(public uiService: UiService){}
 }

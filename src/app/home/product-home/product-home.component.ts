@@ -15,7 +15,7 @@ export class ProductHomeComponent {
 
   onRoute = (productId: number) => {
     try {
-      this.router.navigate([`/products/detail/${productId}`])
+      this.router.navigate([`/product/${productId}`])
     } catch (error) {
       console.error(error);
       throw error;

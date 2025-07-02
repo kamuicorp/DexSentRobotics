@@ -13,8 +13,4 @@ export class UiService {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
-  routeToPage = (path: string) => {
-    this.router.navigate([path])
-  }
 }

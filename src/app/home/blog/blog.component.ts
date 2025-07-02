@@ -1,7 +1,7 @@
 import { AfterViewInit, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Blog } from '../interfaces/product.interface';
-import { SafePipe } from '../pipes/safe.pipe';
+import { Blog } from '../../interfaces/product.interface';
+import { SafePipe } from '../../pipes/safe.pipe';
 
 @Component({
   selector: 'app-blog',
